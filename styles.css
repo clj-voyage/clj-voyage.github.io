@@ -1,7 +1,54 @@
 body {
-  margin: 0px solid black;
+
+  max-width: 70%;
+  /* border: 1px solid black; */
+  margin: 20px auto;
+    font-family: "Roboto", sans-serif;
 }
 
-.top-header {
-  border-bottom: 1px solid black;
+h1, h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+}
+
+.front-header {
+  text-align: center;
+}
+
+li {
+  margin: 10px 0;
+}
+
+.front-main {
+    /* text-align: center; */
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 20px;
+    padding: 20px;
+}
+
+.front-footer {
+  text-align: center;
+}
+
+.front-header a {
+  text-decoration: none;
+  color: black;
+}
+
+.front-main a {
+  color: black;
+}
+
+.front-footer a {
+  color: black;
+}
+
+.front-ol {
+  width: 20%;
+  /* border: 1px solid black; */
+  margin: 0 auto;
 }
