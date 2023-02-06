@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="/styles.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -20,17 +20,51 @@
 
 <main class="front-main">
 
-  <h3>Math</h3>
-    <p>In each chapter, you'll be introduced to some new functions for solving exercises. When you encounter function unknown to you:
-<ul>
-  <li>Read about it in your favourite <a href="https://clojure.org/community/books">Clojure book</a></li>
-  <li>Call <code>(doc ...)</code> and read its documentation</li>
-  <li>Read about it in <a href="https://clojuredocs.org">Clojure Docs</a> and study some examples here</li>
-  <li>Run some experiments in REPL to see, if you can predict behaviour of this function. What kind of arguments this function accepts, what is the type of result?</li>
-</ul>
-For every exercise, you need only functions introduced to you in current or one of the previous chapters. Don't use any additional functions, it can lead you on the wrong track.
+<h1>Math</h1>
+  <section class="">
+    <h3>New functions unlocked!</h3>
+    <p>
 
-    </p>
+<ul>
+  <li><a href="https://clojuredocs.org/clojure.core/+">+</a></li>
+  <li><a href="https://clojuredocs.org/clojure.core/-">- </a></li>
+  <li><a href="https://clojuredocs.org/clojure.core/*">*</a></li>
+  <li>  <a href="https://clojuredocs.org/clojure.core/_fs">&#47;</a></li>
+  <li>  <a href="https://clojuredocs.org/clojure.core/defn">defn</a></li>
+
+</ul>
+</p>
+
+</section>
+
+    <section class="">
+      <h3>Exercises</h3>
+      <article class="">
+        <h4>my-inc</h4>
+        <p>Clojure has function <code>inc</code>, which accepts one number and returns that number increased by one. Write function <code>my-inc</code>, which does the same. Don't use built-in <code>inc</code>.</p>
+        <button onclick="document.getElementById('sol1').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol1">
+          <pre>
+(defn my-inc [x]
+  (+ x 1))
+          </pre>
+New function unclocked! <a href="https://clojuredocs.org/clojure.core/inc"><code>inc</code></a>
+        </div>
+
+      </article>
+      <article class="">
+        <h4>my-dec</h4>
+        <p>Clojure has function <code>dec</code>, which accepts one number and returns that number decreased by one. Write function <code>my-dec</code>, which does the same. Don't use built-in <code>dec</code>.</p>
+        <button onclick="document.getElementById('sol2').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol2">
+          <pre>
+(defn my-dec [x]
+  (- x 1))
+          </pre>
+          New function unclocked! <a href="https://clojuredocs.org/clojure.core/dec"><code>dec</code></a>
+      </article>
+
+    </section>
 
 
 

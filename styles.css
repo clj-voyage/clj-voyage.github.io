@@ -30,6 +30,16 @@ li {
     padding: 20px;
 }
 
+.front-main section {
+  /* border-top: 1px solid black; */
+  border-bottom: 1px solid black;
+}
+
+.front-main section:last-child {
+  /* border-top: 1px solid black; */
+  border-bottom: 0px solid black;
+}
+
 .front-footer {
   text-align: center;
 }
@@ -52,3 +62,12 @@ li {
   /* border: 1px solid black; */
   margin: 0 auto;
 }
+
+.solution {
+  background: black;
+}
+
+pre {
+   text-align: left;
+   /* white-space: pre-line; */
+ }
