@@ -36,6 +36,8 @@
   <li>  <a href="https://clojuredocs.org/clojure.core/not=">not=</a></li>
   <li>  <a href="https://clojuredocs.org/clojure.core/not">not</a></li>
 
+
+
 </ul>
 </p>
 
@@ -51,6 +53,7 @@
             <li> <code>(= 1 2 1)</code> </li>
             <li> <code>(> 1 2 3)</code> </li>
               <li> <code>(< 1 2 3)</code> </li>
+              <li> <code>(> 5)</code> </li>
 
         </ul>
 
@@ -78,26 +81,44 @@ New function unclocked! <a href="https://clojuredocs.org/clojure.core/zero_q"><c
       </article>
       <article class="">
         <h4>my-pos?, my-neg?</h4>
-        <!-- <p>Clojure has function <code>dec</code>, which accepts one number and returns that number decreased by one. Write function <code>my-dec</code>, which does the same. Don't use built-in <code>dec</code>.</p>
+        <p>Clojure has function <code>pos?</code>, which accepts one number and returns <code>true</code>, if that number is positive, and <code>false</code> otherwise. Write function <code>my-pos?</code>, which does the same. Don't use built-in <code>pos?</code>. If you know <code>if</code>, don't use it.</p>
+        <p>There is also function <code>neg?</code>, which accepts one number and returns <code>true</code>, if that number is negative, and <code>false</code> otherwise. Write function <code>my-neg?</code>, which does the same. You can use your <code>my-pos?</code>. Don't use built-in <code>neg?</code>. If you know <code>if</code>, don't use it.</p>
+
         <button onclick="document.getElementById('sol2').style.cssText = 'background:#ffffff;';">Show solution</button>
         <div class="solution" id="sol2">
           <pre>
-(defn my-dec [x]
-  (- x 1))
+(defn my-pos? [x]
+  (> x 0))
+
+(defn my-neg? [x]
+  (> 0 x))
+
+(defn my-neg? [x]
+  (not (my-pos? x)))
           </pre>
-          New function unclocked! <a href="https://clojuredocs.org/clojure.core/dec"><code>dec</code></a> -->
+          New functions unclocked! <a href="https://clojuredocs.org/clojure.core/pos_q"><code>pos?</code></a>,  <a href="https://clojuredocs.org/clojure.core/neg_q"><code>neg?</code></a>
       </article>
 
       <article class="">
         <h4>my-even?, my-odd?</h4>
-        <!-- <p>Clojure has function <code>dec</code>, which accepts one number and returns that number decreased by one. Write function <code>my-dec</code>, which does the same. Don't use built-in <code>dec</code>.</p>
-        <button onclick="document.getElementById('sol2').style.cssText = 'background:#ffffff;';">Show solution</button>
-        <div class="solution" id="sol2">
+        <p>Clojure has function <code>even?</code>, which accepts one number and returns <code>true</code>, if that number is even, and <code>false</code> otherwise. Write function <code>my-even?</code>, which does the same.</p>
+          <p>You can use your <code>my-zero?</code> from previous exercise. Don't use built-in <code>even?</code>. If you know <code>if</code>, don't use it.</p>
+        <p>There is also function <code>odd?</code>, which accepts one number and returns <code>true</code>, if that number is odd, and <code>false</code> otherwise. Write function <code>my-odd?</code>, which does the same.</p>
+          <p>You can use your <code>my-even?</code> or <code>my-zero?</code>. Don't use built-in <code>odd?</code>. If you know <code>if</code>, don't use it.</p>
+
+        <button onclick="document.getElementById('sol3').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol3">
           <pre>
-(defn my-dec [x]
-  (- x 1))
+(defn my-even? [x]
+  (my-zero? (rem x 2)))
+
+(defn my-odd? [x]
+  (not (my-zero? (rem x 2))))
+
+(defn my-odd? [x]
+  (not (my-even? x)))
           </pre>
-          New function unclocked! <a href="https://clojuredocs.org/clojure.core/dec"><code>dec</code></a> -->
+          New functions unclocked! <a href="https://clojuredocs.org/clojure.core/even_q"><code>even?</code></a>, <a href="https://clojuredocs.org/clojure.core/odd_q"><code>odd?</code></a>
       </article>
 
     </section>
