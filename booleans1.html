@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="front-header">
+    <a href="index.html">
+    <hgroup>
+      <h1>clj-voyage</h1>
+      <h2>Clojure exercises</h2>
+    </hgroup>
+      </a>
+  </header>
+
+<main class="front-main">
+
+<h1>Booleans</h1>
+  <section class="">
+    <h3>New functions unlocked!</h3>
+    <p>
+
+<ul>
+  <li><a href="https://clojuredocs.org/clojure.core/=">=</a></li>
+  <li><a href="https://clojuredocs.org/clojure.core/==">==</a></li>
+  <li><a href="https://clojuredocs.org/clojure.core/<"><</a></li>
+  <li>  <a href="https://clojuredocs.org/clojure.core/>">></a></li>
+  <li>  <a href="https://clojuredocs.org/clojure.core/<="><=</a></li>
+
+  <li>  <a href="https://clojuredocs.org/clojure.core/>=">>=</a></li>
+  <li>  <a href="https://clojuredocs.org/clojure.core/not=">not=</a></li>
+  <li>  <a href="https://clojuredocs.org/clojure.core/not">not</a></li>
+
+</ul>
+</p>
+
+</section>
+
+    <section class="">
+      <h3>Exercises</h3>
+      <article class="">
+        What is the value of these expressions? Guess and then evaluate in REPL:
+        <ul>
+          <li> <code>(= 1 1.0)</code> </li>
+          <li> <code>(== 1 1.0)</code> </li>
+            <li> <code>(= 1 2 1)</code> </li>
+            <li> <code>(> 1 2 3)</code> </li>
+              <li> <code>(< 1 2 3)</code> </li>
+
+        </ul>
+
+
+      </article>
+      <article class="">
+        <h4>my-zero?</h4>
+        <p>Clojure has function <code>zero?</code>, which accepts one number and returns <code>true</code>, if that number is equal to zero, and <code>false</code> otherwise. Write function <code>my-zero?</code>, which does the same. Don't use built-in <code>zero?</code>. If you know <code>if</code>, don't use it.</p>
+        <p>Tests with the expected results:
+          <pre>
+(my-zero? 0)
+=> true
+(my-zero? 0.0)
+=> true
+(my-zero? 1)
+=> false</pre>
+        <button onclick="document.getElementById('sol1').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol1">
+          <pre>
+(defn my-zero? [x]
+  (== x 0))</pre>
+New function unclocked! <a href="https://clojuredocs.org/clojure.core/zero_q"><code>zero?</code></a>
+        </div>
+
+      </article>
+      <article class="">
+        <h4>my-pos?, my-neg?</h4>
+        <!-- <p>Clojure has function <code>dec</code>, which accepts one number and returns that number decreased by one. Write function <code>my-dec</code>, which does the same. Don't use built-in <code>dec</code>.</p>
+        <button onclick="document.getElementById('sol2').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol2">
+          <pre>
+(defn my-dec [x]
+  (- x 1))
+          </pre>
+          New function unclocked! <a href="https://clojuredocs.org/clojure.core/dec"><code>dec</code></a> -->
+      </article>
+
+      <article class="">
+        <h4>my-even?, my-odd?</h4>
+        <!-- <p>Clojure has function <code>dec</code>, which accepts one number and returns that number decreased by one. Write function <code>my-dec</code>, which does the same. Don't use built-in <code>dec</code>.</p>
+        <button onclick="document.getElementById('sol2').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol2">
+          <pre>
+(defn my-dec [x]
+  (- x 1))
+          </pre>
+          New function unclocked! <a href="https://clojuredocs.org/clojure.core/dec"><code>dec</code></a> -->
+      </article>
+
+    </section>
+
+
+
+  </main>
+
+  <footer class="front-footer">
+<p>Git: <a href="https://github.com/clj-voyage/clj-voyage.github.io">clj-voyage</a></p>
+<p>2023</p>
+  </footer>
+
+
+
+</body>
+</html>
