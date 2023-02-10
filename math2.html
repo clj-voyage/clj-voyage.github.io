@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="front-header">
+    <a href="index.html">
+    <hgroup>
+      <h1>clj-voyage</h1>
+      <h2>Clojure exercises</h2>
+    </hgroup>
+      </a>
+  </header>
+
+<main class="front-main">
+
+<h1>Math 2</h1>
+  <section class="">
+    <h3>New operators:</h3>
+<div class="fns">
+
+    <p>  <a href="https://clojuredocs.org/clojure.repl/apropos">apropos</a></p>
+
+</div>
+
+</section>
+
+    <section class="">
+      <h3>Exercises</h3>
+      <article class="">
+        For these exercises, you have to require <a href="https://clojure.github.io/clojure/clojure.math-api.html">Clojure math library</a>. Change your namespace definition and evaluate it again:
+        <pre>
+(ns my-project-name.core
+  (:require
+    [clojure.math :as math])
+  (:gen-class))
+
+</pre>
+
+      </article>
+      <article class="">
+        What is the value of these expressions? Evaluate in REPL:
+        <ul>
+          <li> <code>(apropos "pow")</code> </li>
+          <li> <code>(apropos "sinus")</code> </li>
+          <li> <code>(apropos "sin")</code> </li>
+          <li> <code>math/PI</code> </li>
+          <li> <code>(math/sin (math/to-radians 90))</code> </li>
+        </ul>
+
+
+      </article>
+      <article class="">
+        <h4>circle area, circle circumference</h4>
+        <p>Write a function <code>circle-area</code>, which accepts one number and returns area of circle with that radius.</p>
+        <p>Write function <code>circle-cf</code>, which accepts one number and returns circumference of circle with that radius.</p>
+        <p>You can use functions from Math library, that you found in the <a href="https://clojure.github.io/clojure/clojure.math-api.html">documentation</a> or with <code>apropos</code>.</p>
+        <p>Tests with the expected results:
+        <pre>
+(circle-area 10)
+=> 314.1592653589793
+
+(circle-cf 10)
+=> 62.83185307179586</pre></p>
+
+
+        <button onclick="document.getElementById('sol1').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol1">
+          <pre>
+(defn circle-area [r]
+  (* math/PI r r))
+
+(defn circle-cf [r]
+  (* 2 math/PI r))
+</pre>
+        </div>
+
+      </article>
+      <article class="">
+        <h4>hypotenuse</h4>
+        <p>Write a function <code>hypotenuse</code>, which accepts two numbers (lengths of two sides in a right-angled triangle) and returns the length of the hypotenuse, using a Pythagorean theorem.</p>
+          <p>You can use functions from Math library, that you found in the <a href="https://clojure.github.io/clojure/clojure.math-api.html">documentation</a> or with <code>apropos</code>.</p>
+          <p>Tests with the expected results:
+          <pre>
+(hypotenuse 3 4)
+=> 5.0</pre></p>
+        <button onclick="document.getElementById('sol2').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol2">
+          <pre>
+(defn hypotenuse [a b]
+  (math/sqrt (+ (* a a)
+                (* b b))))</pre>
+      </article>
+
+    </section>
+
+
+
+  </main>
+
+  <footer class="front-footer">
+<p>Git: <a href="https://github.com/clj-voyage/clj-voyage.github.io">clj-voyage</a></p>
+<p>2023</p>
+  </footer>
+
+
+
+</body>
+</html>

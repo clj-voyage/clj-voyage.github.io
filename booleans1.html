@@ -22,24 +22,23 @@
 
 <h1>Booleans</h1>
   <section class="">
-    <h3>New functions unlocked!</h3>
-    <p>
+    <h3>New operators:</h3>
+<div class="fns">
 
-<ul>
-  <li><a href="https://clojuredocs.org/clojure.core/=">=</a></li>
-  <li><a href="https://clojuredocs.org/clojure.core/==">==</a></li>
-  <li><a href="https://clojuredocs.org/clojure.core/<"><</a></li>
-  <li>  <a href="https://clojuredocs.org/clojure.core/>">></a></li>
-  <li>  <a href="https://clojuredocs.org/clojure.core/<="><=</a></li>
+    <p><a href="https://clojuredocs.org/clojure.core/=">=</a></p>
+    <p><a href="https://clojuredocs.org/clojure.core/==">==</a></p>
+    <p><a href="https://clojuredocs.org/clojure.core/<"><</a></p>
+    <p>  <a href="https://clojuredocs.org/clojure.core/>">></a></p>
+    <p>  <a href="https://clojuredocs.org/clojure.core/<="><=</a></p>
 
-  <li>  <a href="https://clojuredocs.org/clojure.core/>=">>=</a></li>
-  <li>  <a href="https://clojuredocs.org/clojure.core/not=">not=</a></li>
-  <li>  <a href="https://clojuredocs.org/clojure.core/not">not</a></li>
-
+    <p>  <a href="https://clojuredocs.org/clojure.core/>=">>=</a></p>
+    <p>  <a href="https://clojuredocs.org/clojure.core/not=">not=</a></p>
+    <p>  <a href="https://clojuredocs.org/clojure.core/not">not</a></p>
 
 
-</ul>
-</p>
+
+
+</div>
 
 </section>
 
@@ -70,12 +69,12 @@
 => true
 (my-zero? 1)
 => false</pre>
+</p>
         <button onclick="document.getElementById('sol1').style.cssText = 'background:#ffffff;';">Show solution</button>
         <div class="solution" id="sol1">
           <pre>
 (defn my-zero? [x]
   (== x 0))</pre>
-New function unclocked! <a href="https://clojuredocs.org/clojure.core/zero_q"><code>zero?</code></a>
         </div>
 
       </article>
@@ -96,7 +95,6 @@ New function unclocked! <a href="https://clojuredocs.org/clojure.core/zero_q"><c
 (defn my-neg? [x]
   (not (my-pos? x)))
           </pre>
-          New functions unclocked! <a href="https://clojuredocs.org/clojure.core/pos_q"><code>pos?</code></a>,  <a href="https://clojuredocs.org/clojure.core/neg_q"><code>neg?</code></a>
       </article>
 
       <article class="">
@@ -118,9 +116,24 @@ New function unclocked! <a href="https://clojuredocs.org/clojure.core/zero_q"><c
 (defn my-odd? [x]
   (not (my-even? x)))
           </pre>
-          New functions unclocked! <a href="https://clojuredocs.org/clojure.core/even_q"><code>even?</code></a>, <a href="https://clojuredocs.org/clojure.core/odd_q"><code>odd?</code></a>
       </article>
 
+    </section>
+    <section>
+      <h3>New operators:</h3>
+      <div class="fns">
+
+          <p><a href="https://clojuredocs.org/clojure.core/zero_q">zero?</a></p>
+          <p><a href="https://clojuredocs.org/clojure.core/pos_q">pos?</a></p>
+          <p><a href="https://clojuredocs.org/clojure.core/neg_q">neg?</a></p>
+          <p><a href="https://clojuredocs.org/clojure.core/even_q">even?</a></p>
+          <p><a href="https://clojuredocs.org/clojure.core/odd_q">odd?</a></p>
+
+
+
+
+
+      </div>
     </section>
 
 

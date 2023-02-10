@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <header class="front-header">
+    <a href="index.html">
+    <hgroup>
+      <h1>clj-voyage</h1>
+      <h2>Clojure exercises</h2>
+    </hgroup>
+      </a>
+  </header>
+
+<main class="front-main">
+
+<h1>Conditions</h1>
+  <section class="">
+    <h3>New operators:</h3>
+    <p>
+<div class="fns">
+    <p><a href="https://clojuredocs.org/clojure.core/if">if</a></p>
+    <p><a href="https://clojuredocs.org/clojure.core/cond">cond</a></p>
+
+    <p><a href="https://clojuredocs.org/clojure.core/and">and</a></p>
+    <p><a href="https://clojuredocs.org/clojure.core/or">or</a></p>
+
+    <p><a href="https://clojuredocs.org/clojure.core/min">min</a></p>
+    <p>  <a href="https://clojuredocs.org/clojure.core/max">max</a></p>
+</div>
+
+</section>
+
+    <section class="">
+      <h3>Exercises</h3>
+      <article class="">
+        What is the value of these expressions? Guess and then evaluate in REPL:
+        <ul>
+          <li> <code>(if 1 2 3)</code> </li>
+          <li> <code>(if 0 3 4)</code> </li>
+            <li> <pre>(cond
+  false 1
+  0 2)</pre> </li>
+            <li> <code>(and (zero? 5) 6)</code> </li>
+              <li> <code>(and (pos? 4) 2)</code> </li>
+              <li> <code>(or (zero? 5) 6)</code> </li>
+
+
+        </ul>
+
+
+      </article>
+      <article class="">
+        <h4>my-abs</h4>
+        <p>Clojure has function <code>abs</code>, which accepts one number and returns its absolute value. Write function <code>my-abs</code>, which does the same. Don't use built-in <code>abs</code>.</p>
+        <p>Tests with the expected results:
+          <pre>
+(my-abs 2)
+=> 2
+
+(my-abs 0)
+=> 0
+
+(my-abs -2)
+=> 2</pre>
+</p>
+        <button onclick="document.getElementById('sol1').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol1">
+          <pre>
+(defn my-abs [x]
+  (if (neg? x)
+    (- x)
+    x))
+          </pre>
+        </div>
+
+      </article>
+      <article class="">
+        <h4>sgn</h4>
+        <p>Write function <code>sgn</code>, which returns signum of given number:</p>
+<p><img src="https://wikimedia.org/api/rest_v1/media/math/render/svg/3a2f256a298290065e3ec88bf5cdb0d91459818b"></p>
+<p>Tests with the expected results:
+<pre>
+(sgn 5)
+=> 1
+
+(sgn 0)
+=> 0
+
+(sgn -5)
+=> -1
+</pre>
+</p>
+        <button onclick="document.getElementById('sol2').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol2">
+          <pre>
+(defn sgn [x]
+  (cond (pos? x) 1
+        (zero? x) 0
+        :else -1))
+</pre>
+      </article>
+
+      <article class="">
+        <h4>Logical conjunction</h4>
+        <p>Write a function <code>lc</code> with two arguments. Each argument will be number with value 0 or 1 (this represents false or true). This function returns true or false, based on truth table of logical conjunction.</p>
+        <p>Tests with the expected results:
+        <pre>
+(lc 0 0)
+=> false
+
+(lc 0 1)
+=> false
+
+(lc 1 0)
+=> false
+
+(lc 1 1)
+=> true</pre></p>
+        <button onclick="document.getElementById('sol3').style.cssText = 'background:#ffffff;';">Show solution</button>
+        <div class="solution" id="sol3">
+          <pre>
+(defn lc [a b]
+  (and (not (zero? a))
+       (not (zero? b))))
+          </pre>
+      </article>
+
+    </section>
+
+    <section>
+      <h3>New operators:</h3>
+      <div class="fns">
+          <p><a href="https://clojuredocs.org/clojure.core/abs">abs</a></p>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <footer class="front-footer">
+<p>Git: <a href="https://github.com/clj-voyage/clj-voyage.github.io">clj-voyage</a></p>
+<p>2023</p>
+  </footer>
+
+
+
+</body>
+</html>
